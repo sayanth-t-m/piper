@@ -1,6 +1,6 @@
 # YouTube Downloader GUI
 
-A simple desktop application to download YouTube videos or audio in high quality using a user-friendly graphical interface built with Tkinter and [yt-dlp](https://github.com/yt-dlp/yt-dlp).
+A simple, futuristic desktop application to download YouTube videos or audio in high quality using a user-friendly graphical interface built with Tkinter and [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
 ---
 
@@ -9,6 +9,7 @@ A simple desktop application to download YouTube videos or audio in high quality
 - **Download YouTube Videos**: Save videos in up to 1080p quality.
 - **Download Audio Only**: Extract and save high-quality audio as MP3.
 - **Progress Updates**: See real-time download progress and status messages.
+- **Futuristic UI**: Neon-accented, dark-themed, modern interface.
 - **Easy to Use**: Clean, intuitive interface with no command-line required.
 - **Automatic Save Location**: Files are saved to your system's `Downloads` folder.
 
@@ -23,18 +24,16 @@ A simple desktop application to download YouTube videos or audio in high quality
 
 ---
 
-## Installation
+## Installation & Running (Python Script)
 
 1. **Clone or Download this Repository**
-
 2. **Install Dependencies**
 
-   Open a terminal and run:
-   ```sh
+   ```powershell
    pip install yt-dlp
    ```
 
-   For audio downloads, make sure [ffmpeg](https://ffmpeg.org/download.html) is installed and available in your system PATH.
+   For audio downloads, install [ffmpeg](https://ffmpeg.org/download.html) and add it to your system PATH.
 
    - **Windows**: Download from [ffmpeg.org](https://ffmpeg.org/download.html), extract, and add the `bin` folder to your PATH.
    - **Linux/macOS**:  
@@ -43,24 +42,37 @@ A simple desktop application to download YouTube videos or audio in high quality
      # or
      brew install ffmpeg
      ```
+3. **Run the Application**
+
+   ```powershell
+   python piper.py
+   ```
+
+---
+
+## Packaging as a Standalone Executable (Windows)
+
+1. **Install PyInstaller**
+   ```powershell
+   pip install pyinstaller
+   ```
+2. **Build the Executable**
+   ```powershell
+   pyinstaller --onefile --noconsole piper.py
+   ```
+   - The `.exe` will be in the `dist` folder.
+3. **Distribute**
+   - Share the `dist/piper.exe` file. Users still need [ffmpeg](https://ffmpeg.org/download.html) in their PATH for audio downloads.
 
 ---
 
 ## Usage
 
-1. **Run the Application**
-
-   ```sh
-   python piper.py
-   ```
-
-2. **Using the GUI**
-
-   - Enter the full YouTube video URL in the input box.
-   - Select either **Video (1080p)** or **Audio (High Quality)**.
-   - Click **Download**.
-   - Progress and status messages will appear in the status box.
-   - Downloaded files will be saved in your `Downloads` folder.
+1. **Enter the full YouTube video URL in the input box.**
+2. **Select either Video (1080p) or Audio (High Quality).**
+3. **Click Download.**
+4. **Progress and status messages will appear in the status box.**
+5. **Downloaded files will be saved in your `Downloads` folder.**
 
 ---
 
@@ -92,6 +104,8 @@ See [piper.py](piper.py) for full implementation details.
   Ensure ffmpeg is installed and added to your system PATH.
 - **Permission errors**:  
   Run the application with appropriate permissions or change the download directory in the code.
+- **GUI not launching**:  
+  Make sure you are running with Python 3.7+ and have all dependencies installed.
 
 ---
 
