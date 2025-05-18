@@ -1,4 +1,4 @@
-# YouTube Downloader GUI
+# YouTube Downloader
 
 A simple, futuristic desktop application to download YouTube videos or audio in high quality using a user-friendly graphical interface built with Tkinter and [yt-dlp](https://github.com/yt-dlp/yt-dlp).
 
